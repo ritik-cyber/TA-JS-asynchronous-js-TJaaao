@@ -1,0 +1,48 @@
+body {
+  text-align: center;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-person {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+}
+ul {
+  list-style: none;
+}
+.main-img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin: 2rem 0;
+}
+input {
+  width: 10rem;
+  height: 2rem;
+  text-align: center;
+}
+
+.cat-img {
+  width: 30rem;
+  height: 20rem;
+}
+h2,
+p {
+  text-transform: capitalize;
+}
+
+.btn {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: brown;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
