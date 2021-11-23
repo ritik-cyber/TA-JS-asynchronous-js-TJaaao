@@ -1,0 +1,44 @@
+header h1 {
+  text-align: center;
+  text-transform: capitalize;
+  color: #fff;
+}
+header {
+  background-color: black;
+  padding: 1rem 0;
+}
+.input {
+  /* width: 15rem;
+  border: 1px solid black; */
+  text-align: center;
+  margin: 3rem 0;
+}
+input {
+  /* width: 15rem; */
+  padding: 0.3rem 0;
+  font-size: 18px;
+  text-align: left;
+}
+.main-div {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  /* width: 100rem; */
+  /* border: 1px solid black; */
+}
+img {
+  width: 15rem;
+  height: 10rem;
+}
+span {
+  width: 10rem;
+  height: 10rem;
+  background-color: green;
+}
+.para {
+  margin-left: 1rem;
+  /* width: 50rem; */
+}
+.para button {
+  text-align: right;
+}
