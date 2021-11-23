@@ -2,20 +2,36 @@
 
 ```js
 let promise = new Promise((resolve, reject) => {
-  resolve();
+  setTimeOut(() => {
+    resolve("Promise Resolved!");
+  }, 1000);
 });
+
+promise.then(console.log);
 ```
 
 2. Create another promise. Now have it reject with a value of `Rejected Promise!` without using `setTimeout`. Print the contents of the promise after it has been rejected by passing console.log to `.catch`
 
 ```js
 // Your code
+
+let promise = new Promise((resolved, reject) => {
+  reject("Rejcected promise ");
+});
+
+promise.catch(console.log);
 ```
 
 3. Create another promise. Now have it reject with a value of `Rejected Promise!` without using `setTimeout`. Print the contents of the promise after it has been rejected by passing console.log to `.catch` and also use `.finally` to log message `Promise Settled!`.
 
 ```js
 // Your code
+
+let promise = new Promise((resolved, reject) => {
+  reject("Rejcected promise ");
+});
+
+promise.catch(console.log).finally(() => console.log("promsie settled "));
 ```
 
 4. What will be the output of the code below.
@@ -42,9 +58,12 @@ output; // A
 ```js
 function wait(time) {
   return new Promise((res, rej) => {
-    setTimeOut();
+    setTimeOut(() => {
+      res("wait for some time");
+    }, time);
   });
 }
+wait(time).then(console.log);
 ```
 
 6. Do the following:
@@ -58,6 +77,19 @@ function wait(time) {
 
 ```js
 // Your code
+
+let promise = new Promise((res, rej) => {
+  res(21);
+});
+promise
+  .then((value) => value + 10)
+  .then((value) => value + 10)
+  .then((value) => {
+    if (value > 100) {
+      throw new Error("its greater then 100 we cann't accept");
+    }
+  })
+  .catch(console.log);
 ```
 
 7. Do the following:
@@ -70,6 +102,29 @@ function wait(time) {
 
 ```js
 // Your code
+
+let promise = new Promise((res, rej) => {
+  res(["A"]);
+});
+promise.then((array) => {
+  console.log(array);
+  return array.concat("B");
+}).then((array) => {
+    array.reduce((acc, cv, i), {
+
+        acc[i] = cv
+
+        return acc
+
+    },{})
+})
+//   .then((value) => value + 10)
+//   .then((value) => {
+//     if (value > 100) {
+//       throw new Error("its greater then 100 we cann't accept");
+//     }
+//   })
+//   .catch(console.log);
 ```
 
 8. Do the following:
@@ -81,6 +136,23 @@ function wait(time) {
 
 ```js
 // Your code
+let first = new Promise((res, rej) => {
+  res(1);
+});
+
+first
+  .then((value) => {
+    console.log(value);
+    return 2;
+  })
+  .then((value) => {
+    console.log(value);
+    return 3;
+  })
+  .then((value) => {
+    console.log(value);
+    return 4;
+  });
 ```
 
 9. Do the following:
@@ -92,6 +164,23 @@ function wait(time) {
 
 ```js
 // Your code
+
+let first = new Promise((res, rej) => {
+  res(1);
+});
+
+first.then((value) => {
+  console.log(value);
+  return 2;
+});
+first.then((value) => {
+  console.log(value);
+  return 3;
+});
+first.then((value) => {
+  console.log(value);
+  return 4;
+});
 ```
 
 10. Try to understand the difference between the problem 8 and 9. Write your observation.
@@ -105,4 +194,14 @@ function wait(time) {
 
 ```js
 // Your code
+
+let promise = new Promise((resolve, rej)=> {
+    resolve("Jhon")
+}).then((value)=> {
+    return promsie.resolve("Arya")
+}).then((value) => {return  new Promise((resolve, rej) => {
+    setTimeout(() => {
+        resolve(Bran)
+    }, 2000})
+})
 ```
