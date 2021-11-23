@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+  border: 10px solid black;
+}
+
+.flex {
+  display: flex;
+  /* flex: 0 1 30%; */
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+ul li {
+  flex: 0 1 30%;
+  list-style: none;
+}
+
+img {
+  width: 50%;
+  margin: 1rem 0;
+}
