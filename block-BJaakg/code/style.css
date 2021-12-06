@@ -1,0 +1,31 @@
+header {
+  padding: 1rem;
+  background-color: blueviolet;
+}
+h1 {
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-50 {
+  flex: 0 1 48%;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.box {
+  width: 11rem;
+  border: 1px solid black;
+  padding: 1rem;
+}
